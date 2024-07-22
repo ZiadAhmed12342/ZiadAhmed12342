@@ -1,0 +1,40 @@
+import time
+import random
+
+def play_game():
+    print("You live in a normal village\n")
+    time.sleep(2)
+    print("But when you woke up, all people turned into zombies\n")
+    time.sleep(2)
+    print("You have to choose an option from the three choices:")
+    time.sleep(2)
+    print("1. Get a weapon\n2. Stay home\n3. Get out\n")
+
+    choice = int(input("Choose 1 or 2 or 3: "))
+
+    weapons = ["Gun", "Axe", "Knife"]
+
+    if choice == 1:
+        print("You chose to get a weapon.")
+        print("Your weapon is:", random.choice(weapons), ", Nice Weapon")
+        print("Congratulations! You won. You killed all the zombies and survived.")
+    elif choice == 2:
+        print("You chose to stay home.")
+        print("You won't survive long. You will die.")
+    elif choice == 3:
+        print("You chose to get out.")
+        print("You will die.")
+    else:
+        print("Invalid choice. You can only choose 1, 2, or 3.")
+
+def main():
+    while True:
+        play_game()
+        play_again = input("Do you want to play again? (yes/no): ").strip().lower()
+        if play_again != 'yes':
+            print("Thank you for playing!")
+            break
+
+if __name__ == "__main__":
+    main()
+--->
